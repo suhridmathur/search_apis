@@ -99,14 +99,14 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     'search_apis.throttles.PerMinuteThrottle',
-    #     'search_apis.throttles.PerDayThrottle',
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'per_minute': '5/minute',
-    #     'per_day': '100/day'
-    # }
+    'DEFAULT_THROTTLE_CLASSES': [
+        'search_apis.throttles.PerMinuteThrottle',
+        'search_apis.throttles.PerDayThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'per_minute': '5/minute',
+        'per_day': '100/day'
+    }
 }
 
 # Password validation
