@@ -8,7 +8,7 @@ class AbstractSearchMixin(metaclass=ABCMeta):
     """
     Abstract class to be inherited by classes for creating SearchMixins
     for their Web Applications
-    Subclasses have to override the `get_documents_by_id` and `get_status_and_response`
+    Subclasses have to override the `get_documents_by_id` and `get_documents`
     methods.
     """
     @abstractclassmethod
@@ -20,7 +20,6 @@ class AbstractSearchMixin(metaclass=ABCMeta):
         pass
 
     def get_response_and_status(self, url):
-        print(url)
         response = requests.get(url)
         return response.json(), response.status_code
     
